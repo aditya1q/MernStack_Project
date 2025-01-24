@@ -1,7 +1,7 @@
 import './App.css';
-import Login from './auth/Login';
-import Dashboard from './pages/Dashboard';
 import { useUserLoggedIn } from './store';
+import Login from './auth/simpleAuth/Login';
+import Dashboard from './pages/Dashboard';
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {

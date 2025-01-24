@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useUserLoggedIn } from '../store';
+import { useUserLoggedIn } from '../../store';
 import { useNavigate } from 'react-router-dom';
 import ls from 'localstorage-slim';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { loggedIn, setLoggedIn } = useUserLoggedIn();
+  const { setLoggedIn } = useUserLoggedIn();
 
   const [formData, setFormData] = useState({
     email: '',
