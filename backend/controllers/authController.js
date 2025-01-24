@@ -13,7 +13,7 @@ export const loginUser = async (req, res) => {
     const newUser = new auth({ email, password });
     const savedUser = await newUser.save();
 
-    res.status(201).json({ message: 'User login successfully', user: savedUser });
+    res.status(201).json({ message: 'login successfully', user: savedUser });
   } catch (error) {
     console.error('Error saving user:', error);
     res.status(500).json({ message: 'Server error', error });
