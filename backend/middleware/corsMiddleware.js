@@ -1,7 +1,7 @@
 import cors from 'cors';
 
 export const corsMiddleware = cors({
-  origin: '*', // Replace '*' with your frontend's origin in production
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: 'http://localhost:5173', // Your frontend URL
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
 });

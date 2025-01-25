@@ -1,10 +1,12 @@
 import express from 'express';
-import { loginUser, logoutUser } from '../controllers/authController.js';
+import { loginUser } from '../controllers/authController.js';
+import { checkUserLogin, userLogin } from '../controllers/authJwtTokenController.js';
 
 const router = express.Router();
 
 // Define routes
 router.post('/login', loginUser);
-router.post('/logout', logoutUser);
+router.post('/auth/login', userLogin);
+router.get('/check-auth', checkUserLogin);
 
 export default router;

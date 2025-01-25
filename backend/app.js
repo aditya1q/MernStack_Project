@@ -9,8 +9,6 @@ import { errorHandler } from './middleware/errorHandler.js';
 const app = express();
 
 // Middleware
-
-// 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
